@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OTP Security Test</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <div class="brand">Melsoft OTP</div>
+      <h1>Send OTP</h1>
+      <p class="subtitle">Enter an email address to receive a one-time password.</p>
+
+      <form id="sendForm">
+        <label for="sendEmail">Email address</label>
+        <input id="sendEmail" name="email" type="email" placeholder="you@example.com" required />
+        <button type="submit">Send OTP</button>
+      </form>
+
+      <button id="resendButton" class="secondary" type="button">Resend OTP</button>
+      <p id="sendMessage" class="message"></p>
+
+      <a href="verify.html" class="link">Go to Verify OTP →</a>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

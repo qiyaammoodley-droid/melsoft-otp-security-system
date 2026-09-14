@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: #f4f1f6;
+  color: #25202a;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.card {
+  width: 100%;
+  max-width: 430px;
+  background: white;
+  padding: 34px;
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(40, 20, 50, 0.12);
+}
+
+.brand {
+  color: #66266a;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+h1 {
+  margin: 0 0 8px;
+}
+
+.subtitle {
+  color: #6d6670;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+label {
+  display: block;
+  margin: 14px 0 7px;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d2ccd5;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+input:focus {
+  outline: 2px solid #d8b7db;
+  border-color: #66266a;
+}
+
+button {
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 18px;
+  background: #66266a;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #512052;
+}
+
+button.secondary {
+  background: #eee7f0;
+  color: #512052;
+  margin-top: 10px;
+}
+
+button.secondary:hover {
+  background: #e2d8e5;
+}
+
+.message {
+  min-height: 24px;
+  margin-top: 16px;
+  line-height: 1.4;
+}
+
+.link {
+  display: inline-block;
+  margin-top: 16px;
+  color: #66266a;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+@media (max-width: 500px) {
+  .card {
+    padding: 25px;
+  }
+}
