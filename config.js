@@ -6,6 +6,7 @@ const config = {
   otpExpirySeconds: Number(process.env.OTP_EXPIRY_SECONDS) || 30,
   resendWindowMinutes: Number(process.env.RESEND_WINDOW_MINUTES) || 5,
   maxResendsPerOtp: Number(process.env.MAX_RESENDS_PER_OTP) || 3,
+  useTempStorage: process.env.USE_TEMP_STORAGE === 'true',
   smtp: {
     host: process.env.SMTP_HOST,
     port: Number(process.env.SMTP_PORT) || 587,

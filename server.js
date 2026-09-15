@@ -25,9 +25,20 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.listen(config.port, () => {
-  console.log(`OTP system running at http://localhost:${config.port}`);
-  console.log('Development email mode is active unless SMTP settings are added to .env.');
-});
+if (require.main === module) {
+  app.listen(config.port, () => {
+    console.log(`OTP system running at http://localhost:${config.port}`);
+    console.log('Development email mode is active unless SMTP settings are added to .env.');
+  });
+}
+
+module.exports = app;
+
+if (require.main === module) {
+  app.listen(config.port, () => {
+    console.log(`OTP system running at http://localhost:${config.port}`);
+    console.log('Development email mode is active unless SMTP settings are added to .env.');
+  });
+}
 
 module.exports = app;

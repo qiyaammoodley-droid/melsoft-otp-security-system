@@ -3,7 +3,10 @@ const path = require('path');
 const { randomInt, createHash } = require('crypto');
 const config = require('../config');
 
-const dataDirectory = path.join(__dirname, '..', 'data');
+const dataDirectory = config.useTempStorage
+  ? '/tmp'
+  : path.join(__dirname, '..', 'data');
+
 const dataFile = path.join(dataDirectory, 'otps.json');
 
 function ensureDataFile() {
